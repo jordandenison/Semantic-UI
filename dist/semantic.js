@@ -13831,30 +13831,30 @@ $.fn.search = function(parameters) {
             settings.onResultsOpen.call($results);
           }
         },
-        hideResults: function() {
-          if( module.is.visible() ) {
-            if( module.can.transition() ) {
-              module.debug('Hiding results with css animations');
-              $results
-                .transition({
-                  animation  : settings.transition + ' out',
-                  debug      : settings.debug,
-                  verbose    : settings.verbose,
-                  duration   : settings.duration,
-                  queue      : true
-                })
-              ;
-            }
-            else {
-              module.debug('Hiding results with javascript');
-              $results
-                .stop()
-                .fadeOut(settings.duration, settings.easing)
-              ;
-            }
-            settings.onResultsClose.call($results);
-          }
-        },
+        hideResults: function() {},
+        //   if( module.is.visible() ) {
+        //     if( module.can.transition() ) {
+        //       module.debug('Hiding results with css animations');
+        //       $results
+        //         .transition({
+        //           animation  : settings.transition + ' out',
+        //           debug      : settings.debug,
+        //           verbose    : settings.verbose,
+        //           duration   : settings.duration,
+        //           queue      : true
+        //         })
+        //       ;
+        //     }
+        //     else {
+        //       module.debug('Hiding results with javascript');
+        //       $results
+        //         .stop()
+        //         .fadeOut(settings.duration, settings.easing)
+        //       ;
+        //     }
+        //     settings.onResultsClose.call($results);
+        //   }
+        // },
 
         generateResults: function(response) {
           module.debug('Generating html from response', response);
